@@ -5,7 +5,7 @@
 /**
  * main - entry point
  *
- * Description: assignng a random number to the variable n each time it is executed
+ * Description: assign a random num to the var n each time it is executed
  *
  * returne 0
  */
@@ -15,7 +15,6 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	
 	if (n < 0)
 	{
 		printf("%d is negative\n", n);
