@@ -3,12 +3,13 @@
 #include <time.h>
 
 /**
- * main - entry point
+ * main - assign a random number, and execute it and then prints it
  *
  * Description: assign a random num to the var n each time it is executed
  *
- * returne 0
+ * Return: 0 (Success)
  */
+
 int main(void)
 {
 	int n;
