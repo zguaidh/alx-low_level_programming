@@ -14,14 +14,13 @@ int main(void)
 {
 	char alph;
 
-	if (alph != 'q' && alph != 'e')
+	for (alph = 'a'; alph <= 'z'; alph++)
 	{
-
-		for (alph = 'a'; alph <= 'z'; alph++)
+		if (alph != 'q' && alph != 'e')
 		{
-		putchar(alph);
+			putchar(alph);
 		}
-		putchar('\n');
 	}
+	putchar('\n');
 	return (0);
 }
