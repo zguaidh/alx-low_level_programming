@@ -14,7 +14,7 @@ int main(void)
 {
 	char alph;
 
-	while (alph != 'q' || alph != 'e')
+	if (alph != 'q' && alph != 'e')
 	{
 
 		for (alph = 'a'; alph <= 'z'; alph++)
@@ -22,7 +22,6 @@ int main(void)
 		putchar(alph);
 		}
 		putchar('\n');
-		return (0);
 	}
 	return (0);
 }
