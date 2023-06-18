@@ -3,7 +3,7 @@
 /**
 * main - entry point
 *
-* Description :the program prints the string: "Programming is like building a multilingual puzzle
+* Description : Printing a string
 *
 * Return: 0
 */
