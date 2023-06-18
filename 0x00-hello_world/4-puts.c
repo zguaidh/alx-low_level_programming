@@ -1,15 +1,15 @@
-# !/bin/bash
 #include <stdio.h>
 
 /**
-* main - print the string with the puts function
+* main - entry point
 *
-* Description :
-* the program prints the string: "Programming is like building a multilingual puzzle
+* Description :the program prints the string: "Programming is like building a multilingual puzzle
+*
 * Return: 0
-*/ 
+*/
+
 int main(void)
 {
-	puts("\"Programming is like building a multilingual puzzle");
+	puts("\"Programming is like building a multilingual puzzle\n");
 	return (0);
 }
