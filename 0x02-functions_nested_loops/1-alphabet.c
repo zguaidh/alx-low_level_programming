@@ -1,22 +1,21 @@
 #include "main.h"
 
 /**
- * main -entry point
+ * main - Entry point
  *
- * description: printing the alphabet
+ * Description: printing the alphabet
  *
- * Return: 0
+ * Return: Always 0(Success)
  */
 
 int main(void)
 {
-	int i = 'a';
+	char alphabet;
 
-		while (i <= 'z')
-		{
-			_putchar(i);
-			i++;
-		}
+	for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
+	{
+		_putchar(alphabet);
+	}
 	_putchar('\n');
 	return (0);
 }
