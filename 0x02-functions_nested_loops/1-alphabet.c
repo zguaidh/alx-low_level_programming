@@ -1,13 +1,8 @@
 #include "main.h"
-
 /**
- * main - Entry point
- *
- * Description: printing the alphabet
- *
- * Return: Always 0(Success)
+ * print_alphabet - Prints alphabet
+ * Return: No return
  */
-
 void print_alphabet(void)
 {
 	char c;
