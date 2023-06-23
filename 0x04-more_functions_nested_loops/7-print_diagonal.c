@@ -3,8 +3,9 @@
  *print_diagonal - draws a diagonal line
  *
  *Description: function that draws a diagonal line on the terminal.
+ *@n: integer equal to number of lines
  *
- *Return: no return
+ * Return: no return
  */
 void print_diagonal(int n)
 {
@@ -33,4 +34,3 @@ void print_diagonal(int n)
 		}
 	}
 }
-					
