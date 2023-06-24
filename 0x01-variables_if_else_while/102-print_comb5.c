@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - Entry point
@@ -9,35 +10,41 @@
  */
 int main(void)
 {
-	int x;
-	int y;
+	int x = 0;
 	int a;
 	int b;
 
-	for (x = '0'; x <= '9'; x++)
+	int y;
+	int c;
+	int d;
+
+	while (x <= 98)
 	{
-		for (y = '0'; y <= '9'; y++)
+		a = (x / 10 + '0');
+		b = (x % 10 + '0');
+		y = 0;
+		while (y <= 99)
 		{
-			for (a = '0'; a <= '9'; a++)
+			c = (y / 10 + '0');
+			d = (y % 10 + '0');
+
+			if (x < y)
 			{
-				for (b = '0'; b <= '9'; b++)
+				putchar(a);
+				putchar(b);
+				putchar(' ');
+				putchar(c);
+				putchar(d);
+
+				if (x != 98)
 				{
-					if ((x != a && x != b) || (y != a && y != b))
-					{
-					putchar(x);
-					putchar(y);
-					putchar(' ');
-					putchar(a);
-					putchar(b);
-					}
-					if (x + y + a + b != '9' + '8' + '9' + '9')
-					{
 					putchar(',');
 					putchar(' ');
-					}
 				}
 			}
+			y++;
 		}
+		x++;
 	}
 	putchar('\n');
 	return (0);
