@@ -7,14 +7,15 @@
 int main(void)
 {
 	int count;
-	int n = 1;
+	long n = 1;
 	long F = 2;
+	long sum;
 
-	for (count = 0; count <= 50; count++)
+	for (count = 0; count < 50; count++)
 	{
 		if (count == 0)
 		{
-			printf("%d", n);
+			printf("%ld", n);
 		}
 		else if (count == 1)
 		{
@@ -22,10 +23,12 @@ int main(void)
 		}
 		else
 		{
-			F = F + n;
-			n = F - n;
+			sum = n + F;
 
-			printf(", %ld", F);
+			printf(", %ld", sum);
+
+			n = F;
+			F = sum;
 		}
 	}
 	printf("\n");
