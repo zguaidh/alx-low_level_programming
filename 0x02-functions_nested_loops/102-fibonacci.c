@@ -8,7 +8,7 @@ int main(void)
 {
 	int count;
 	int n = 1;
-	int F = 1;
+	long F = 2;
 
 	for (count = 0; count <= 50; count++)
 	{
@@ -16,12 +16,16 @@ int main(void)
 		{
 			printf("%d", n);
 		}
-		else if (count != 0)
+		else if (count == 1)
+		{
+			printf(", %ld", F);
+		}
+		else
 		{
 			F = F + n;
 			n = F - n;
 
-			printf(", %d", F);
+			printf(", %ld", F);
 		}
 	}
 	printf("\n");
