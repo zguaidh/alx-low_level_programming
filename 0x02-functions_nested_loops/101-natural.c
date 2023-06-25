@@ -7,21 +7,15 @@
 int main(void)
 {
 	int n;
+	int S = 0;
 
 	for  (n = 0; n < 1024; n++)
 	{
-		int S = 0;
-		int S1;
-		int S2;
-
-		while (n % 3 == 0)
+		if ((n % 3) == 0 || (n % 5) == 0)
 		{
-			S1 = S + n;
-		}
-		for (S2 = S1; n % 5 == 0; S2 = S1 + n)
-		{
-			printf("%d", S2);
+			S += n;
 		}
 	}
+	printf("%d\n", S);
 	return (0);
 }
