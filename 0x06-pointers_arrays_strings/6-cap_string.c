@@ -18,9 +18,9 @@ int lowercase(char x)
 int Separators(char x)
 {
 	int i;
-	char sep[] = " \t\n,.!?\"(){}";
+	char sep[] = " \t\n,;.!?\"(){}";
 
-	for (i = 0; i < 12; i++)
+	for (i = 0; i < 13; i++)
 		if (x == sep[i])
 			return (1);
 	return (0);
@@ -35,6 +35,7 @@ int Separators(char x)
 
 char *cap_string(char *str)
 {
+	char *ptr = str;
 	int issep = 1;
 
 	while (*str)
@@ -50,5 +51,5 @@ char *cap_string(char *str)
 			issep = 0;
 		str++;
 	}
-	return (str);
+	return (ptr);
 }
