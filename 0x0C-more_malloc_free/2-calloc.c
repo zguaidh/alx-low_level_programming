@@ -32,14 +32,14 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	ptr = malloc(size * nmemb);
+	ptr = malloc(sizeof(size) * nmemb);
 
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
 
-	_memset(ptr, 0, (sizeof(int) *  nmemb));
+	_memset(ptr, 0, nmemb);
 
 	return (ptr);
 }
