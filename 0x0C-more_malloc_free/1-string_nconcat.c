@@ -12,18 +12,16 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len1, len2, i, j;
+	unsigned int len1 = 0, len2 = 0, i, j;
 	char *ptr;
 
-	len1 = strlen(s1);
-	len2 = strlen(s2);
-	if (s1 == NULL)
+	if (s1 != NULL)
 	{
-		s1 = "";
+		len1 = strlen(s1);
 	}
-	if (s2 == NULL)
+	if (s2 != NULL)
 	{
-		s2 = "";
+		len2 = strlen(s2);
 	}
 	if (n >= len2)
 	{
