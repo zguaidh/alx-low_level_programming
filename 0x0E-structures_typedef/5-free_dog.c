@@ -1,12 +1,13 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "dog.h"
 /**
- *free dog - function that frees dogs.
+ *free_dog - function that frees dogs.
  *@d: the pointer
+ *Description: it frees the memory previously allocated
  *Return: no return
  */
 void free_dog(dog_t *d)
 {
-	if (d == NULL)
-
+	free(d);
 }
