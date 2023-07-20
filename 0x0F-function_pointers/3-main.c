@@ -12,8 +12,9 @@
  */
 int main(int argc, char *argv[])
 {
-	int output;
+	int output ;
 	char *s = "+-*/%";
+
 
 	if (argc >= 3)
 	{
@@ -30,7 +31,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
-	output = get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3]));
+	output = (*get_op_func(argv[2]))(atoi(argv[1]), atoi(argv[3]));
 	printf("%d\n", output);
 	return (0);
 }
