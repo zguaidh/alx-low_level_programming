@@ -10,28 +10,28 @@
  *
  *Return: int
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	int (*operation)(int, int);
-	int num1 = atoi(argv[1]);
-	int num2 = atoi(argv[3]);
+	int output ;
+	char *s = "+-*/%";
+
 
 	if (argc >= 3)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	operation = get_op_func(argv[2]);
-	if (!operation)
+	if (*argv[2] !=  s[0] || *argv[2] !=  s[1] || *argv[2] !=  s[2] || *argv[2] !=  s[3] || *argv[2] !=  s[4])
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	if (atoi(argv[3]) == 0 && (argv[2][0] ==  '/' || argv[2][0] == '%'))
+	if ((atoi(argv[3]) == 0 && *argv[2] !=  s[3]) || (atoi(argv[3]) && *argv[2] !=  s[4]))
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	printf("%d\n", operation(num1, num2));
+	output = (*get_op_func(argv[2]))(atoi(argv[1]), atoi(argv[3]));
+	printf("%d\n", output);
 	return (0);
 }
