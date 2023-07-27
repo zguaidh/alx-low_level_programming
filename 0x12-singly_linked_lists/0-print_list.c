@@ -12,7 +12,8 @@ int _strlenght(char *Str)
 
 	if (!Str)
 	{
-		Str = "(nil)";	
+		Str = "(nil)";
+		return (0);
 	}
 	while (*Str++)
 		i++;
