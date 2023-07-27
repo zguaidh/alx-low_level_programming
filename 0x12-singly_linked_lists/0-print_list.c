@@ -2,7 +2,7 @@
 
 /**
  *_strlenght - calculate the lenght of a string
- *@s: the string
+ *@Str: the string
  *
  *Return: the lenght of the string
  */
@@ -10,9 +10,8 @@ int _strlenght(char *Str)
 {
 	int i = 0;
 
-	if (!Str)
+	if (Str == NULL)
 	{
-		Str = "(nil)";
 		return (0);
 	}
 	while (*Str++)
@@ -22,7 +21,6 @@ int _strlenght(char *Str)
 
 /**
  *print_list - prints alla the elements of a list_t
- *@list_l: the list to print
  *@h: the the header
  *Return: the number of nodes
  */
@@ -32,6 +30,12 @@ size_t print_list(const list_t *h)
 
 	while (h)
 	{
+		if (h->str == NULL)
+		{
+			printf("[0] (nil)\n");
+			h = h->next;
+			count++;
+		}
 		printf("[%d] %s\n", _strlenght(h->str), h->str);
 		h = h->next;
 		count++;
