@@ -31,11 +31,11 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		return (NULL);
 	if (index > listint_len(head) - 1)
 		return (NULL);
+	node = head;
 	while (count < index)
 	{
-		node = head;
-		node = node->next;
 		count++;
+		node = node->next;
 	}
 	return (node);
 
