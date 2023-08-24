@@ -9,38 +9,19 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *file = NULL;
-	ssize_t o, r, w;
-	char *My_arr;
+	int file;
+	ssize_t r;
+	char My_arr[1024];
 
 	if (!filename)
 		return (0);
 	if (!letters)
 		return (0);
-	o = open(filename, O_RDONLY);
-	if (o == -1)
+	file = open(filename, O_RDONLY);
+	if (file == -1)
 		return (0);
-	My_arr = malloc(sizeof(char *) * letters);
-	if (My_arr == NULL)
-	{
-		fclose(file);
-		return (0);
-	}
-	r = read(o, &My_arr[0], letters);
-	if (r <= 0)
-	{
-		fclose(file);
-		free(My_arr);
-		return (0);
-	}
-	w = write(STDOUT_FILENO, &My_arr[0], r);
-	if (w != r)
-	{
-		fclose(file);
-		free(My_arr);
-		return (0);
-	}
-	free(My_arr);
-	fclose(file);
-	return (w);
+	r = read(file, &My_arr[0], letters);
+	r = write(STDOUT_FILENO, &My_arr[0], r);
+	close(file);
+	return (r);
 }
